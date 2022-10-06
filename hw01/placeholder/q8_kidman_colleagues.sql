@@ -11,7 +11,7 @@ WITH colleagues AS (
             FROM people
             WHERE name LIKE '%kidman%'
               AND born = 1967
-        ) AND category = 'actress'
+        ) AND category IN ('actress', 'self')
     ) AND category IN ('actress', 'actor')
 )
 SELECT p.name
